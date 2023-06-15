@@ -1,0 +1,18 @@
+Function calculateBMI(weight As Double, height As Double) As Double
+    ' This function calculates the Body Mass Index (BMI) of a person based on their weight and height
+    
+    ' Check if the weight and height are valid
+    If weight <= 0 Or height <= 0 Then
+        ' Log the error
+        Debug.Print "Error: Invalid weight or height"
+        calculateBMI = 0
+        Exit Function
+    End If
+    
+    ' Calculate the BMI
+    Dim bmi As Double
+    bmi = weight / (height * height)
+    
+    ' Return the BMI
+    calculateBMI = bmi
+End Function
